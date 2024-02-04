@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="zone" id="colorfulDiv"></div>
+        <div class="zone" id="userguess"></div>
+        <button class="start" onclick="StartGame()">Start</button>
+        <div class="slider" style="display: none;">
+            <div class="ranges">
+                <label class="range-label" for="RedInput">Red: <span id="RedValue">0</span></label>
+                <input type="range" value="0" id="RedInput" class="range" min="0" max="255" oninput="update()">
+            </div>
+            <div class="ranges">
+                <label class="range-label" for="GreenInput">Green: <span id="GreenValue">0</span></label>
+                <div><input type="range" value="0" id="GreenInput" class="range" min="0" max="255" oninput="update()"></div>
+            </div>
+            <div class="ranges">
+                <label class="range-label" for="BlueInput">Blue: <span id="BlueValue">0</span></label>
+                <div><input type="range" value="0" id="BlueInput" class="range" min="0" max="255" oninput="update()"></div>
+            </div>
+            <div><button onclick="result()">Check</button></div>
+        </div>
+        <div class="output" id="resultDiv" style="display: none;">
+            <div id="Guess"></div>
+            <div id="Generated"></div>
+            <div id="accuracy"></div>
+            <button onclick="NewGame()">New Game</button>
+            <button onclick="Exit()">Exit</button>
+        </div>
+    </div>
+    
+<script src="script.js"></script>    
+</body>
+</html>
